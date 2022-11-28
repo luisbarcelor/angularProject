@@ -2,13 +2,35 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { NavBarComponent } from './views/nav-bar/nav-bar.component';
+import { HomeComponent } from './views/home/home.component';
+import { AppRoutingModule } from './app-routing.module';
+import { NotFoundComponent } from './views/not-found/not-found.component';
+import { AboutComponent } from './views/about/about.component';
+import { FooterComponent } from './views/footer/footer.component';
+import { FeaturedComponent } from './views/featured/featured.component';
+import { TipsComponent } from './views/tips/tips.component';
+import { ProductsComponent } from './views/products/products.component';
+import { BannerComponent } from './views/banner/banner.component';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavBarComponent,
+    HomeComponent,
+    NotFoundComponent,
+    AboutComponent,
+    FooterComponent,
+    FeaturedComponent,
+    TipsComponent,
+    ProductsComponent,
+    BannerComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

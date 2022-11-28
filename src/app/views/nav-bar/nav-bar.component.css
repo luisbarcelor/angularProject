@@ -1,0 +1,46 @@
+#menuCont {
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9;
+}
+
+#menu {
+  background-color: #242424;
+  padding: 1%;
+}
+
+#logo {
+  color: #fcba03;
+}
+
+#logo img {
+  width: 15%;
+  margin-right: 5%;
+}
+
+#logo:hover {
+  cursor: pointer;
+}
+
+#menuList {
+  position: absolute;
+  right: 0;
+  /*background-color: green;*/
+  padding-right: 2%;
+  padding-left: 2%;
+}
+
+a {
+  color: gainsboro;
+}
+.nav-link {
+  transition: 0.5s;
+}
+
+.nav-link:hover {
+  color: #fcba03;
+}
+
+
