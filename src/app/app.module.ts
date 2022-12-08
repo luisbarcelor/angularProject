@@ -13,6 +13,7 @@ import { TipsComponent } from './views/tips/tips.component';
 import { ProductsComponent } from './views/products/products.component';
 import { BannerComponent } from './views/banner/banner.component';
 import { HttpClientModule } from "@angular/common/http";
+import { RecentOpearationsComponent } from './views/recent-opearations/recent-opearations.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HttpClientModule } from "@angular/common/http";
     FeaturedComponent,
     TipsComponent,
     ProductsComponent,
-    BannerComponent
+    BannerComponent,
+    RecentOpearationsComponent
   ],
   imports: [
     BrowserModule,

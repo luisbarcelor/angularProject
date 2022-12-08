@@ -7,6 +7,7 @@ import { HomeComponent } from "./views/home/home.component";
 import {FeaturedComponent} from "./views/featured/featured.component";
 import {TipsComponent} from "./views/tips/tips.component";
 import {ProductsComponent} from "./views/products/products.component";
+import {RecentOpearationsComponent} from "./views/recent-opearations/recent-opearations.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'tips', component: TipsComponent },
   { path: 'products', component: ProductsComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'recent-operations', component: RecentOpearationsComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent }
 ];
