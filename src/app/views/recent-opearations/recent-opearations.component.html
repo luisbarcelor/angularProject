@@ -1,14 +1,14 @@
 <nav-bar></nav-bar>
 <div id="main">
   <div id="container">
-    <div class="innerContainer">
-      <h1>Calculadora <span [innerHTML]="symbol"></span></h1>
+    <div id="div-calculadora" class="innerContainer">
+      <h1 class="ro-title">Calculator <span [innerHTML]="symbols[0]"></span></h1>
       <form>
         <div id="fields">
-          <div class="form-outline">
+          <div id="field1" class="form-outline">
             <input [(ngModel)]="operation.primer_valor" [ngModelOptions]="{standalone: true}" type="number" id="number1" class="form-control" placeholder="First Number"/>
           </div>
-          <div class="form-outline">
+          <div id="field2" class="form-outline">
             <input [(ngModel)]="operation.segundo_valor" [ngModelOptions]="{standalone: true}" type="number" id="number2" class="form-control" placeholder="Second Number"/>
           </div>
         </div>
@@ -38,20 +38,20 @@
             </label>
           </div>
         </div>
-        <button class="btn btn-primary" (click)="saveNewOperation()">Calculate</button>
+        <button id="calculate" class="btn btn-primary" (click)="saveNewOperation()">Calculate</button>
         <div id="result">
-          <h5>{{result}}</h5>
+          <h5 id="result-value">= {{result}}</h5>
         </div>
       </form>
     </div>
     <div class="innerContainer">
-      <h1>Recent Operations <span [innerHTML]="symbol"></span></h1>
+      <h1 class="ro-title">Recent Operations <span [innerHTML]="symbols[1]"></span></h1>
       <table id="table" class="table" *ngIf="operationList.length">
         <thead>
-        <th>First Number</th>
-        <th>Second Number</th>
-        <th>Operation</th>
-        <th>Result</th>
+          <th><h4 id="th1" class="t-head">First Number</h4></th>
+          <th><h4 id="th2" class="t-head">Second Number</h4></th>
+          <th><h4 id="th3" class="t-head">Operation</h4></th>
+          <th><h4 id="th4" class="t-head">Result</h4></th>
         </thead>
         <tbody>
         <tr *ngFor="let operation of operationList">

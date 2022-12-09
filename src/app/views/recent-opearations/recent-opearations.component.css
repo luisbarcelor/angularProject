@@ -10,6 +10,7 @@
   padding: 5%;
   border-radius: 20px;
   background-color: #242424;
+
 }
 
 .innerContainer {
@@ -23,5 +24,85 @@
 }
 
 #delete-btn {
-  margin-left: 70%;
+  margin-left: 50%;
+  background-color: #E03F3F;
+  font-weight: bold;
+  color: gainsboro;
+  border-radius: 15px;
+}
+
+#delete-btn:hover {
+  background-color: #242424;
+  color: #fcba03;
+  border-color: #242424;
+}
+
+#delete-btn:active {
+  background-color: #484848;
+}
+
+#div-calculadora {
+  margin-bottom: 5%;
+  width: 50%;
+}
+
+.ro-title {
+  margin-bottom: 2.5%;
+}
+
+.t-head {
+  margin-bottom: 2rem;
+  background-color: #242424;
+  color: #fcba03;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+#th1, #th2, #th3 {
+  margin-right: 10%;
+}
+#fields {
+  margin-top: 5%;
+  width: 40%;
+}
+#field1 {
+  margin-bottom: 5%;
+}
+#field2 {
+  margin-bottom: 10%;
+}
+
+#radioGroup {
+  margin-bottom: 5%;
+}
+
+#calculate {
+  margin-bottom: 5%;
+  width: 40%;
+  border-radius: 20px;
+  background-color: #E03F3F;
+  border: 1px solid #E03F3F;
+}
+
+#calculate:hover {
+  background-color: #242424;
+  color: #fcba03;
+  border-color: #242424;
+}
+
+#calculate:active {
+  background-color: #484848;
+}
+
+#result-value {
+  background-color: #242424;
+  color: #fcba03;
+  border-radius: 20px;
+  width: 40%;
+  padding: 2.5%;
+}
+
+.form-check-input:checked {
+  background-color: #E03F3F;
+  border-color: #E03F3F;
 }

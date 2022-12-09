@@ -10,7 +10,7 @@ import { FormsModule } from "@angular/forms";
 })
 export class RecentOpearationsComponent implements OnInit {
   public error: string = ""
-  public symbol: string = '&#9000;&#65039';
+  public symbols: string[] = ['&#129008;', '&#8987;'];
   public result: number = 0;
   public operationList: Operation[] = [];
   public operation: Operation = {
