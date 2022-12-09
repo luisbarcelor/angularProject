@@ -8,7 +8,11 @@ class CalculatorRoutes {
   }
 
   config(): void {
-    this.router.get('/', calculatorController.index);
+    this.router.get('/', calculatorController.read);
+    this.router.get('/:id', calculatorController.readOne);
+    this.router.post('/', calculatorController.create);
+    this.router.put('/:id', calculatorController.update);
+    this.router.delete('/:id', calculatorController.delete);
   }
 }
 
