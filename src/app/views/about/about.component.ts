@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FakeData} from "../../interfaces/FakeData";
-import {InputService} from "../../services/input.service";
+import {InputService} from "../../services/input/input.service";
 
 @Component({
   selector: 'pm-about',
@@ -9,7 +9,7 @@ import {InputService} from "../../services/input.service";
 })
 export class AboutComponent implements OnInit {
   public dataList: FakeData[];
-  public cont: number = 1;
+
   public symbol: string = '&#128214';
 
   constructor(private service: InputService) {

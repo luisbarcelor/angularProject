@@ -1,3 +1,71 @@
 <nav-bar></nav-bar>
-<p>recent-opearations works!</p>
+<div id="main">
+  <div id="container">
+    <div class="innerContainer">
+      <h1>Calculadora <span [innerHTML]="symbol"></span></h1>
+      <form>
+        <div id="fields">
+          <div class="form-outline">
+            <input [(ngModel)]="operation.primer_valor" [ngModelOptions]="{standalone: true}" type="number" id="number1" class="form-control" placeholder="First Number"/>
+          </div>
+          <div class="form-outline">
+            <input [(ngModel)]="operation.segundo_valor" [ngModelOptions]="{standalone: true}" type="number" id="number2" class="form-control" placeholder="Second Number"/>
+          </div>
+        </div>
+        <div id="radioGroup">
+          <div class="form-check">
+            <input [(ngModel)]="operation.operacion" [value]="'Sum'" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              Sum
+            </label>
+          </div>
+          <div class="form-check">
+            <input [(ngModel)]="operation.operacion" [value]="'Subtract'" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+            <label class="form-check-label" for="exampleRadios2">
+              Subtract
+            </label>
+          </div>
+          <div class="form-check">
+            <input [(ngModel)]="operation.operacion" [value]="'Multiply'" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+            <label class="form-check-label" for="exampleRadios3">
+              Multiply
+            </label>
+          </div>
+          <div class="form-check">
+            <input [(ngModel)]="operation.operacion" [value]="'Divide'" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option3">
+            <label class="form-check-label" for="exampleRadios3">
+              Divide
+            </label>
+          </div>
+        </div>
+        <button class="btn btn-primary" (click)="saveNewOperation()">Calculate</button>
+        <div id="result">
+          <h5>{{result}}</h5>
+        </div>
+      </form>
+    </div>
+    <div class="innerContainer">
+      <h1>Recent Operations <span [innerHTML]="symbol"></span></h1>
+      <table id="table" class="table" *ngIf="operationList.length">
+        <thead>
+        <th>First Number</th>
+        <th>Second Number</th>
+        <th>Operation</th>
+        <th>Result</th>
+        </thead>
+        <tbody>
+        <tr *ngFor="let operation of operationList">
+          <td>{{operation.primer_valor}}</td>
+          <td>{{operation.segundo_valor}}</td>
+          <td>{{operation.operacion}}</td>
+          <td>{{operation.resultado}}</td>
+          <td><button id="delete-btn" class="btn btn-danger" (click)="deleteOperation(operation.id)">Delete</button></td>
+        </tr>
+        <td></td>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 <footer></footer>
+

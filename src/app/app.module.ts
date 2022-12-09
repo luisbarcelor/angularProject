@@ -14,6 +14,7 @@ import { ProductsComponent } from './views/products/products.component';
 import { BannerComponent } from './views/banner/banner.component';
 import { HttpClientModule } from "@angular/common/http";
 import { RecentOpearationsComponent } from './views/recent-opearations/recent-opearations.component';
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { RecentOpearationsComponent } from './views/recent-opearations/recent-op
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
