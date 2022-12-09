@@ -8,7 +8,7 @@ import * as http from "http";
   providedIn: 'root'
 })
 export class CalculatorOperationsService {
-  API_URI = 'http://localhost:4000/api'
+  API_URI = 'http://localhost:5000/api'
   constructor(private http: HttpClient) {}
 
   getOperations(): Observable<any> {
